@@ -6,6 +6,20 @@ The page has a text box where the user can input text, and a button with a micro
 
 ## JavaScript (SpeechSynthesis API):
 The ```speak()``` function retrieves the text from the textarea and uses ```SpeechSynthesisUtterance()``` to create a speech object. It sets parameters like rate, pitch, and volume, and then calls window.```speechSynthesis.speak()``` to read the text aloud.
+# code
+```
+    <script>
+        function speak() {
+            var text = document.getElementById('text').value;
+            var speech = new SpeechSynthesisUtterance();
+            speech.text = text;
+            speech.rate = 1;  // Adjust rate if needed
+            speech.pitch = 1; // Adjust pitch if needed
+            speech.volume = 1;
+            window.speechSynthesis.speak(speech);
+        }
+    </script>
+```
 
 ## Browser Support: 
 This works in modern browsers like ```Chrome```, ```Edge```, and ```Firefox```, but not all browsers support the Web Speech API. Most mobile browsers also support it, though compatibility might vary slightly
