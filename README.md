@@ -1,30 +1,29 @@
-# Text-to-Speech-Demo
-This "[Text to Speech](https://neel-xyt.github.io/Text-to_Speech-Demo/)" demo uses the Web Speech API, a browser feature that allows web applications to convert text into speech.
+# Text-to-Speech Demo
 
-## HTML Layout:
-The page has a text box where the user can input text, and a button with a microphone icon to trigger speech.
+This **Text-to-Speech** feature uses the **Web Speech API**, a browser-based API that allows web applications to convert text into speech.
 
-## JavaScript (SpeechSynthesis API):
-The ```speak()``` function retrieves the text from the textarea and uses ```SpeechSynthesisUtterance()``` to create a speech object. It sets parameters like rate, pitch, and volume, and then calls window.```speechSynthesis.speak()``` to read the text aloud.
-# code
-```
-    <script>
-        function speak() {
-            var text = document.getElementById('text').value;
-            var speech = new SpeechSynthesisUtterance();
-            speech.text = text;
-            speech.rate = 1;  // Adjust rate if needed
-            speech.pitch = 1; // Adjust pitch if needed
-            speech.volume = 1;
-            window.speechSynthesis.speak(speech);
-        }
-    </script>
-```
+## How It Works
 
-## Browser Support: 
-This works in modern browsers like ```Chrome```, ```Edge```, and ```Firefox```, but not all browsers support the Web Speech API. Most mobile browsers also support it, though compatibility might vary slightly
+The **Text-to-Speech** feature in this demo is powered by the **SpeechSynthesis API**, which is part of the Web Speech API. The user can input text into a textbox, and by clicking the "Speak" button, the entered text will be converted into speech.
 
-### URL:👇
-```
-https://neel-xyt.github.io/Text-to_Speech-Demo/
-```
+### HTML Layout
+
+The layout consists of:
+- A `textarea` where users can enter text.
+- A button with a microphone icon that triggers the speech synthesis function.
+
+### JavaScript (SpeechSynthesis API)
+
+The JavaScript function `speak()` is responsible for converting the text into speech. It retrieves the value from the text box, creates a speech object, and sets parameters like speech rate, pitch, and volume. The text is then read aloud using the `window.speechSynthesis.speak()` method.
+
+### Code Example:
+```javascript
+function speak() {
+    var text = document.getElementById('text').value;
+    var speech = new SpeechSynthesisUtterance();
+    speech.text = text;
+    speech.rate = 1;  // Adjust speech rate
+    speech.pitch = 1; // Adjust pitch
+    speech.volume = 1; // Adjust volume
+    window.speechSynthesis.speak(speech);
+}
