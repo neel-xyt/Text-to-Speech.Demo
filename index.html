@@ -4,81 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text to Speech</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #1e1e1e;
-            color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .container {
-            background-color: #333;
-            border-radius: 12px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-            padding: 25px;
-            width: 90%;
-            max-width: 600px;
-            text-align: center;
-        }
-
-        h1 {
-            color: #00c8ff;
-            margin-bottom: 20px;
-        }
-
-        textarea {
-            width: 100%;
-            height: auto;
-            padding: 12px;
-            margin-bottom: 20px;
-            border: 1px solid #555;
-            border-radius: 6px;
-            resize: vertical;
-            font-size: 1.1em;
-            background-color: #222;
-            color: #f5f5f5;
-            box-sizing: border-box;
-        }
-
-        /* Speak Button Styles */
-        .speak-button {
-            font-size: 1.3em;
-            color: white;
-            background: linear-gradient(45deg, #00c8ff, #007a9c);
-            background-size: 200% 200%;
-            width: 100%;
-            padding: 15px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 8px rgba(0, 200, 255, 0.2);
-        }
-
-        .speak-button:hover {
-            background-position: 100% 0;
-            transform: scale(1.08);
-            box-shadow: 0 6px 15px rgba(0, 200, 255, 0.3);
-        }
-
-        .speak-button:active {
-            transform: scale(0.95);
-            background-position: 0% 100%;
-            box-shadow: 0 4px 8px rgba(0, 200, 255, 0.5);
-        }
-
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -86,17 +13,5 @@
         <textarea id="text" rows="6" placeholder="Enter text here..."></textarea><br>
         <button class="speak-button" onclick="speak()"><i class="fas fa-microphone"></i> Speak</button>
     </div>
-
-    <script>
-        function speak() {
-            var text = document.getElementById('text').value;
-            var speech = new SpeechSynthesisUtterance();
-            speech.text = text;
-            speech.rate = 1;  // Adjust rate if needed
-            speech.pitch = 1; // Adjust pitch if needed
-            speech.volume = 1;
-            window.speechSynthesis.speak(speech);
-        }
-    </script>
 </body>
 </html>
