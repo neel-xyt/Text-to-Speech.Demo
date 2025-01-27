@@ -1,6 +1,6 @@
 # Text-to-Speech Demo
 
-This [**Text-to-Speech**](neel-xyt.github.io/Text-to_Speech-Demo/) feature uses the **Web Speech API**, a browser-based API that allows web applications to convert text into speech.
+This [**Text-to-Speech**](https://neel-xyt.github.io/Text-to_Speech-Demo/) feature uses the **Web Speech API**, a browser-based API that allows web applications to convert text into speech.
 
 ## How It Works
 
