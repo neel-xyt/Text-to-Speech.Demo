@@ -1,5 +1,5 @@
 {
-    "name": "My PWA",
+    "name": "Text-to-Speech.Demo",
     "short_name": "PWA",
     "start_url": "/index.html",
     "display": "standalone",
